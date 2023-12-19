@@ -1,14 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    @apply
+    bg-main2
+  }
+  header {
+    @apply 
+    grid
+    grid-cols-10
+    grid-flow-col
+    bg-main4
+    font-fontBig
+  }
 
-@layer base{
-
-
-
-
+  .nav_logo {
+    @apply 
+    text-main3
+    bg-main5
+    col-span-2
+    flex
+    flex-row
+    flex-wrap
+    items-center
+    text-3xl
+    font-bold
+    rounded-r-xl
+    p-2
+    min-w-min
     
-
-
-
+  }
+  .nav_menu {
+    @apply 
+    text-main3
+    bg-main4
+    col-span-5
+    flex
+    flex-row
+    flex-wrap
+    items-center
+    justify-evenly
+    font-semibold
+    text-lg
+  }
+  .nav_menu a {
+    @apply 
+    hover:text-main1
+    hover:text-xl;
+    transition: all 300ms ease-in-out;
+  }
+  
 }
