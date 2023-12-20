@@ -440,6 +440,8 @@ video {
   display: none;
 }
 
+/* _______________base______________ */
+
 * {
   margin: 0;
   padding: 0;
@@ -448,17 +450,17 @@ video {
 
 html {
   overflow-x: hidden;
-}
-
-body {
   background: url("../src/img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg") fixed center center no-repeat
     ;
   background-size: cover;
 }
 
-.container{
+body {
+  width: 100vw;
   background-color: #f8f0fbf1;
 }
+
+/* _______________Header______________ */
 
 header {
   position: sticky;
@@ -533,18 +535,143 @@ header {
   margin-right: 0.75rem;
 }
 
+/* _______________Main______________ */
+
 main {
   margin-top: 1rem;
-  margin-bottom: 12rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  padding-bottom: 12rem;
 }
 
+/* _______________logo______________ */
+
+.Logo_home {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(99 32 238 / var(--tw-text-opacity));
+  text-shadow: 2px 2px 0px #88e68b;
+}
+
+.Logo_home img {
+  filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
+    brightness(101%) contrast(102%);
+}
+
+/* _______________Video Promo______________ */
+
+.publicita {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 32 238 / var(--tw-bg-opacity));
+  box-shadow: 10px 10px #88e68b;
+  width: 66rem;
+  height: 30rem;
+}
+
+/* _______________Testo intro______________ */
+
+.testo_intro {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1;
+  font-style: italic;
+  --tw-text-opacity: 1;
+  color: rgb(70 144 255 / var(--tw-text-opacity));
+  text-shadow: 2px 2px 0px #88e68b;
+}
+
+.intro {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro img{
+  filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
+      brightness(101%) contrast(102%);
+}
+
+/* _______________Scopri servizio______________ */
+
+.scopri_servizio {
+  margin-top: 8rem;
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 26 29 / var(--tw-bg-opacity));
+  font-family: "Bebas Neue", sans-serif;
+  height: 30rem;
+  -webkit-mask-image: url("../src/img/selez_piano.svg");
+  mask-image: url("../src/img/selez_piano.svg");
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: 50% 20%;
+  mask-position: 50% 20%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.scopri_servizio p {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(136 230 139 / var(--tw-text-opacity));
+}
+
+.scopri_servizio button {
+  margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: -moz-min-content;
+  width: min-content;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(70 144 255 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+  text-align: right;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(248 240 251 / var(--tw-text-opacity));
+  box-shadow: 0px 0px 15px #0b0045af;
+}
+
+/* _______________Banner______________ */
+
 .banner {
-  -webkit-mask-image: url("../src/img/dry-brush-stroke-2-1024x384.svg");
-  mask-image: url("../src/img/dry-brush-stroke-2-1024x384.svg");
+  -webkit-mask-image: url("../src/img/Vector\ 1fgsfgs.svg");
+  mask-image: url("../src/img/Vector\ 1fgsfgs.svg");
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-position: 50% 20%;
@@ -584,35 +711,75 @@ main {
   transform: translate(-50%, -50%);
 }
 
-.publicita {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+/* _______________Footer______________ */
+
+.footer {
+  bottom: 0px;
   --tw-bg-opacity: 1;
-  background-color: rgb(99 32 238 / var(--tw-bg-opacity));
-  box-shadow: 10px 10px rgb(136 230 139);
-  width: 66rem;
-  height: 30rem;
+  background-color: rgb(33 26 29 / var(--tw-bg-opacity));
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-.Logo_home {
-  margin-top: 2.5rem;
-  margin-bottom: 9rem;
+.footer-content {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  font-size: 8rem;
-  line-height: 1;
-  font-weight: 700;
+  justify-content: space-between;
+}
+
+.footer-links, .footer-contact, .footer-social {
+  margin-bottom: 1rem;
+  flex: 1 1 0%;
+  --tw-text-opacity: 1;
+  color: rgb(248 240 251 / var(--tw-text-opacity));
+}
+
+.footer h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.footer-links ul, .footer-social ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.footer-links ul li, .footer-social ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  --tw-text-opacity: 1;
+  color: rgb(70 144 255 / var(--tw-text-opacity));
+}
+
+.footer a:hover {
   --tw-text-opacity: 1;
   color: rgb(99 32 238 / var(--tw-text-opacity));
 }
 
-.Logo_home img {
-  filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
-      brightness(101%) contrast(102%);
+.footer-bottom {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(136 230 139 / var(--tw-text-opacity));
+}
+
+.footer_logo {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(105%) contrast(102%);
 }
 
 *, ::before, ::after {

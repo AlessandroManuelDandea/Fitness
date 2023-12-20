@@ -3,6 +3,9 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @layer base {
+
+  /* _______________base______________ */
+
   * {
     margin: 0;
     padding: 0;
@@ -10,19 +13,20 @@
   }
   html {
     overflow-x: hidden;
-  }
-
-  body {
-    
     background: url("../src/img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg") fixed center center no-repeat
     ;background-size: cover;
   }
 
-  .container{
+  body {
+    @apply
+    w-screen;
     background-color: #f8f0fbf1;
   }
-
   
+
+
+
+    /* _______________Header______________ */
 
   header {
     @apply grid
@@ -79,18 +83,163 @@
     @apply mr-3;
   }
 
+  
+
+  
+
+    /* _______________Main______________ */
+
   main {
     @apply flex
    flex-wrap
    flex-col
+   justify-center
    items-center
    mt-4
-   mb-48;
+   
+   pb-48
+   
   }
 
+
+
+ /* _______________logo______________ */
+
+ .Logo_home {
+  @apply 
+  flex
+items-center
+ flex-row
+ justify-center
+ text-6xl
+  font-bold
+  mt-10
+  mb-2
+  text-main4;
+  text-shadow: 2px 2px 0px #88e68b;
+}
+.Logo_home img {
+  filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
+    brightness(101%) contrast(102%);
+
+}
+  
+
+
+
+  /* _______________Video Promo______________ */
+
+  .publicita {
+    @apply bg-main4
+    flex
+    flex-wrap
+    justify-center
+    items-center;
+    box-shadow: 10px 10px #88e68b;
+    width: 66rem;
+    height: 30rem;
+  }
+  
+  
+
+  
+  /* _______________Testo intro______________ */
+
+  .testo_intro{
+    @apply
+ text-main5
+    text-5xl
+    px-16
+    italic
+    text-center;
+    text-shadow: 2px 2px 0px #88e68b;
+  }
+
+
+
+  .intro{
+    @apply
+    flex
+    flex-col
+    justify-center
+    items-center
+    my-10
+    mx-48
+   
+   
+  }
+  .intro img{
+    filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
+      brightness(101%) contrast(102%);
+  }
+
+
+   /* _______________Scopri servizio______________ */
+
+   .scopri_servizio{
+    @apply
+    mt-32
+    flex
+    flex-col
+    bg-main3
+    w-screen
+    flex
+    flex-row
+    justify-center
+    items-center
+    ;
+    font-family: "Bebas Neue", sans-serif;
+    height: 30rem;
+    -webkit-mask-image: url("../src/img/selez_piano.svg");
+    mask-image: url("../src/img/selez_piano.svg");
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-position: 50% 20%;
+    mask-position: 50% 20%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    
+   }
+
+   .scopri_servizio p{
+    @apply
+    text-7xl
+    text-main1
+    font-semibold
+    mt-5
+    text-center
+    mx-32
+   
+    
+    
+    
+   }
+
+   .scopri_servizio button{
+    @apply
+    text-2xl
+    text-main2
+    bg-main5
+    mt-5
+    text-right
+    w-min
+    ml-auto
+    mr-auto
+    
+    p-3
+    rounded-lg;
+    box-shadow: 0px 0px 15px #0b0045af;
+    
+   }
+  
+
+
+  /* _______________Banner______________ */
+
   .banner {
-    -webkit-mask-image: url("../src/img/dry-brush-stroke-2-1024x384.svg");
-    mask-image: url("../src/img/dry-brush-stroke-2-1024x384.svg");
+    -webkit-mask-image: url("../src/img/Vector\ 1fgsfgs.svg");
+    mask-image: url("../src/img/Vector\ 1fgsfgs.svg");
     -webkit-mask-size: 100%;
     mask-size: 100%;
     -webkit-mask-position: 50% 20%;
@@ -117,30 +266,77 @@
     font-family: "Bebas Neue", sans-serif;
     transform: translate(-50%, -50%);
   }
-  .publicita {
-    @apply bg-main4
-    flex
-    flex-wrap
-    justify-center
-    items-center;
-    box-shadow: 10px 10px rgb(136 230 139);
-    width: 66rem;
-    height: 30rem;
-  }
 
-  .Logo_home {
-    @apply flex
-   flex-wrap
-   flex-row
-   justify-center-center
-   text-9xl
-    font-bold
-    mt-10
-    mb-36
-    text-main4;
-  }
-  .Logo_home img {
-    filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
-      brightness(101%) contrast(102%);
-  }
+
+
+  /* _______________Footer______________ */
+
+  
+  .footer {
+    @apply 
+    bg-main3
+    py-10
+    bottom-0
+}
+
+.footer-content {
+    @apply 
+    flex 
+    justify-between 
+    flex-wrap;
+}
+
+ .footer-links, .footer-contact, .footer-social {
+    @apply 
+    flex-1 
+    mb-4
+    text-main2
+    
+}
+
+
+
+.footer h3 {
+    @apply 
+    text-lg 
+    font-semibold 
+    mb-2;
+}
+
+.footer-links ul, .footer-social ul {
+    @apply 
+    list-none 
+    p-0;
+}
+
+.footer-links ul li, .footer-social ul li {
+    @apply 
+    mb-2;
+}
+
+.footer a {
+    @apply 
+    text-main5
+    hover:text-main4;
+}
+
+.footer-bottom {
+    @apply 
+    text-center 
+    mt-4 
+    text-sm 
+    text-main1;
+}
+.footer_logo{
+  @apply
+  flex
+  flex-row
+  justify-start
+  items-start
+  mx-10
+  text-4xl
+  font-bold;
+ 
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(105%) contrast(102%);
+}
 }
