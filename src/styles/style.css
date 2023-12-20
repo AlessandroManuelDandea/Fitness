@@ -8,38 +8,56 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body{
-    @apply
-    bg-main2
+  html {
+    overflow-x: hidden;
   }
+
+  body {
+    
+    background: url("../src/img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg") fixed center center no-repeat
+    ;background-size: cover;
+  }
+
+  .container{
+    background-color: #f8f0fbf1;
+  }
+
+  
+
   header {
-    @apply 
-    grid
-    grid-cols-10
+    @apply grid
+    grid-cols-12
     grid-flow-col
     bg-main4
     font-fontBig
+    sticky 
+    top-0 
+    z-50
+    w-screen
+    rounded-b-lg
+    shadow-lg;
+    font-family: "Bebas Neue", sans-serif;
   }
 
   .nav_logo {
-    @apply 
-    text-main3
+    @apply text-main3
     bg-main5
     col-span-2
     flex
     flex-row
     flex-wrap
     items-center
-    text-3xl
+    text-4xl
     font-bold
     rounded-r-xl
     p-2
     min-w-min
-    
+    px-3
+    rounded-b-lg;
   }
+
   .nav_menu {
-    @apply 
-    text-main3
+    @apply text-main3
     bg-main4
     col-span-5
     flex
@@ -48,13 +66,81 @@
     items-center
     justify-evenly
     font-semibold
-    text-lg
+    text-lg;
   }
+
   .nav_menu a {
-    @apply 
-    hover:text-main1
+    @apply hover:text-main1
     hover:text-xl;
     transition: all 300ms ease-in-out;
   }
-  
+
+  .nav_logo img {
+    @apply mr-3;
+  }
+
+  main {
+    @apply flex
+   flex-wrap
+   flex-col
+   items-center
+   mt-4
+   mb-48;
+  }
+
+  .banner {
+    -webkit-mask-image: url("../src/img/dry-brush-stroke-2-1024x384.svg");
+    mask-image: url("../src/img/dry-brush-stroke-2-1024x384.svg");
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-position: 50% 20%;
+    mask-position: 50% 20%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  .banner img {
+    @apply w-screen;
+  }
+  .banner_cont {
+    position: relative;
+  }
+  .slogan {
+    @apply absolute
+    text-main5
+    text-7xl
+    font-bold 
+    hover:text-8xl;
+    top: 21rem;
+    left: 30rem;
+    transition: all 300ms ease-in-out;
+    text-shadow: 6px 6px #88e68b;
+    font-family: "Bebas Neue", sans-serif;
+    transform: translate(-50%, -50%);
+  }
+  .publicita {
+    @apply bg-main4
+    flex
+    flex-wrap
+    justify-center
+    items-center;
+    box-shadow: 10px 10px rgb(136 230 139);
+    width: 66rem;
+    height: 30rem;
+  }
+
+  .Logo_home {
+    @apply flex
+   flex-wrap
+   flex-row
+   justify-center-center
+   text-9xl
+    font-bold
+    mt-10
+    mb-36
+    text-main4;
+  }
+  .Logo_home img {
+    filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
+      brightness(101%) contrast(102%);
+  }
 }
