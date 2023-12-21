@@ -3,7 +3,6 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @layer base {
-
   /* _______________base______________ */
 
   * {
@@ -13,20 +12,17 @@
   }
   html {
     overflow-x: hidden;
-    background: url("../src/img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg") fixed center center no-repeat
-    ;background-size: cover;
+    background: url("../src/img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg")
+      fixed center center no-repeat;
+    background-size: cover;
   }
 
   body {
-    @apply
-    w-screen;
+    @apply w-screen;
     background-color: #f8f0fbf1;
   }
-  
 
-
-
-    /* _______________Header______________ */
+  /* _______________Header______________ */
 
   header {
     @apply grid
@@ -83,11 +79,7 @@
     @apply mr-3;
   }
 
-  
-
-  
-
-    /* _______________Main______________ */
+  /* _______________Main______________ */
 
   main {
     @apply flex
@@ -97,17 +89,13 @@
    items-center
    mt-4
    
-   pb-48
-   
+   pb-48;
   }
 
+  /* _______________logo______________ */
 
-
- /* _______________logo______________ */
-
- .Logo_home {
-  @apply 
-  flex
+  .Logo_home {
+    @apply flex
 items-center
  flex-row
  justify-center
@@ -116,16 +104,12 @@ items-center
   mt-10
   mb-2
   text-main4;
-  text-shadow: 2px 2px 0px #88e68b;
-}
-.Logo_home img {
-  filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
-    brightness(101%) contrast(102%);
-
-}
-  
-
-
+    text-shadow: 2px 2px 0px #88e68b;
+  }
+  .Logo_home img {
+    filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
+      brightness(101%) contrast(102%);
+  }
 
   /* _______________Video Promo______________ */
 
@@ -139,15 +123,11 @@ items-center
     width: 66rem;
     height: 30rem;
   }
-  
-  
 
-  
   /* _______________Testo intro______________ */
 
-  .testo_intro{
-    @apply
- text-main5
+  .testo_intro {
+    @apply text-main5
     text-5xl
     px-16
     italic
@@ -155,30 +135,23 @@ items-center
     text-shadow: 2px 2px 0px #88e68b;
   }
 
-
-
-  .intro{
-    @apply
-    flex
+  .intro {
+    @apply flex
     flex-col
     justify-center
     items-center
     my-10
-    mx-48
-   
-   
+    mx-48;
   }
-  .intro img{
+  .intro img {
     filter: invert(45%) sepia(99%) saturate(1531%) hue-rotate(198deg)
       brightness(101%) contrast(102%);
   }
 
+  /* _______________Scopri servizio______________ */
 
-   /* _______________Scopri servizio______________ */
-
-   .scopri_servizio{
-    @apply
-    mt-32
+  .scopri_servizio {
+    @apply mt-32
     flex
     flex-col
     bg-main3
@@ -186,8 +159,7 @@ items-center
     flex
     flex-row
     justify-center
-    items-center
-    ;
+    items-center;
     font-family: "Bebas Neue", sans-serif;
     height: 30rem;
     -webkit-mask-image: url("../src/img/selez_piano.svg");
@@ -198,27 +170,19 @@ items-center
     mask-position: 50% 20%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    
-    
-   }
+  }
 
-   .scopri_servizio p{
-    @apply
-    text-7xl
+  .scopri_servizio p {
+    @apply text-7xl
     text-main1
     font-semibold
     mt-5
     text-center
-    mx-32
-   
-    
-    
-    
-   }
+    mx-32;
+  }
 
-   .scopri_servizio button{
-    @apply
-    text-2xl
+  .scopri_servizio button {
+    @apply text-2xl
     text-main2
     bg-main5
     mt-5
@@ -230,10 +194,7 @@ items-center
     p-3
     rounded-lg;
     box-shadow: 0px 0px 15px #0b0045af;
-    
-   }
-  
-
+  }
 
   /* _______________Banner______________ */
 
@@ -267,76 +228,135 @@ items-center
     transform: translate(-50%, -50%);
   }
 
+  /* _______________slideshow______________ */
+  .titolo_slide {
+    @apply italic
+  font-semibold
+  text-6xl
+  text-center
+  mt-32
+  text-main5;
+  }
 
+  .slides {
+    @apply mt-16
+    flex
+    flex-row
+    items-center
+    justify-center;
+  }
+
+  .slide1,
+  .slide2,
+  .slide3 {
+    @apply mx-4;
+  }
+
+  .slide1 {
+    @apply opacity-70;
+    background: url("../src/img/training.jpg") center center no-repeat;
+    background-size: cover;
+    width: 23rem;
+    height: 30rem;
+    box-shadow: 0px 0px 30px #0000002a;
+    transition: all 800ms ease-in-out;
+  }
+  .slide1:hover {
+    @apply opacity-100;
+    width: 24rem;
+    height: 32rem;
+  }
+  .slide2 {
+    @apply opacity-70;
+    background: url("../src/img/yoga.jpg") center center no-repeat;
+    background-size: cover;
+    width: 23rem;
+    height: 30rem;
+    box-shadow: 0px 0px 30px #0000002a;
+    transition: all 300ms ease-in-out;
+  }
+  .slide2:hover {
+    @apply opacity-100;
+    width: 24rem;
+    height: 32rem;
+  }
+
+  .slide3 {
+    @apply opacity-70;
+    background: url("../src/img/nutrizione.jpg") center center no-repeat;
+    background-size: cover;
+    width: 23rem;
+    height: 30rem;
+    box-shadow: 0px 0px 30px #0000002a;
+    transition: all 800ms ease-in-out;
+  }
+  .slide3:hover {
+    @apply opacity-100;
+    width: 24rem;
+    height: 32rem;
+  }
 
   /* _______________Footer______________ */
 
-  
   .footer {
-    @apply 
-    bg-main3
+    @apply bg-main3
     py-10
     bottom-0
-}
+    w-screen;
+  }
 
-.footer-content {
-    @apply 
-    flex 
+  .footer-content {
+    @apply flex 
     justify-between 
     flex-wrap;
-}
+  }
 
- .footer-links, .footer-contact, .footer-social {
-    @apply 
-    flex-1 
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    @apply flex-1 
     mb-4
-    text-main2
-    
-}
+    text-main2;
+  }
 
-
-
-.footer h3 {
-    @apply 
-    text-lg 
+  .footer h3 {
+    @apply text-lg 
     font-semibold 
     mb-2;
-}
+  }
 
-.footer-links ul, .footer-social ul {
-    @apply 
-    list-none 
+  .footer-links ul,
+  .footer-social ul {
+    @apply list-none 
     p-0;
-}
+  }
 
-.footer-links ul li, .footer-social ul li {
-    @apply 
-    mb-2;
-}
+  .footer-links ul li,
+  .footer-social ul li {
+    @apply mb-2;
+  }
 
-.footer a {
-    @apply 
-    text-main5
+  .footer a {
+    @apply text-main5
     hover:text-main4;
-}
+  }
 
-.footer-bottom {
-    @apply 
-    text-center 
+  .footer-bottom {
+    @apply text-center 
     mt-4 
     text-sm 
     text-main1;
-}
-.footer_logo{
-  @apply
-  flex
+  }
+  .footer_logo {
+    @apply flex
   flex-row
   justify-start
   items-start
   mx-10
   text-4xl
   font-bold;
- 
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(105%) contrast(102%);
-}
+
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg)
+      brightness(105%) contrast(102%);
+  }
 }
